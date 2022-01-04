@@ -20,8 +20,8 @@ class App extends StatelessWidget {
         const ResponsiveBreakpoint.autoScaleDown(360, name: 'ExtraSmall'),
         const ResponsiveBreakpoint.autoScale(640, name: MOBILE),
       ], breakpointsLandscape: [
-        const ResponsiveBreakpoint.autoScaleDown(600, name: 'ExtraSmall'),
-        const ResponsiveBreakpoint.autoScale(1000, name: MOBILE),
+        const ResponsiveBreakpoint.resize(600, name: 'ExtraSmall'),
+        const ResponsiveBreakpoint.resize(1000, name: MOBILE),
       ]),
     );
   }

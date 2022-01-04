@@ -19,3 +19,5 @@ ThemeData appTheme = ThemeData(
     caption: const TextStyle(fontSize: 12.0),
   ),
 );
+
+const Color backgroundColour = Color(0xfffafafa);

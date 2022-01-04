@@ -3,7 +3,9 @@ import 'package:teacher_feedback/presentation/widgets/shared/background_padding.
 import 'package:teacher_feedback/presentation/widgets/sign_up/sign_up_email_button.dart';
 import 'package:teacher_feedback/presentation/widgets/sign_up/sign_up_google_button.dart';
 
+import '../account_icon.dart';
 import '../existing_account_button.dart';
+import '../sign_up_instructions.dart';
 
 class SignUpPortrait extends StatelessWidget {
   const SignUpPortrait({Key? key}) : super(key: key);
@@ -16,21 +18,26 @@ class SignUpPortrait extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
-          /*SignUpInstructions(
-            crossAxisAlignment: CrossAxisAlignment.start,
-          ),*/
+          AccountIcon(),
           SizedBox(
-            height: 20,
+            height: 10,
+          ),
+          SignUpInstructions(),
+          SizedBox(
+            height: 10,
           ),
           SignUpGoogleButton(),
           SizedBox(
             height: 20,
           ),
           SignUpEmailButton(),
+          SizedBox(
+            height: 10,
+          ),
           Divider(
-            indent: 10,
-            endIndent: 10,
-            height: 30,
+            indent: 30,
+            endIndent: 30,
+            height: 10,
           ),
           ExistingAccountButton(),
         ],
