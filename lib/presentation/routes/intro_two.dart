@@ -3,29 +3,26 @@ import 'package:teacher_feedback/presentation/widgets/intro/screens/intro_templa
 import 'package:teacher_feedback/presentation/widgets/intro/screens/intro_template_portrait.dart';
 import 'package:teacher_feedback/presentation/widgets/shared/orientation_switcher.dart';
 
-// This screen is shown on route '/intro-one'
-
-class IntroOne extends StatelessWidget {
-  const IntroOne({Key? key}) : super(key: key);
+class IntroTwo extends StatelessWidget {
+  const IntroTwo({Key? key}) : super(key: key);
 
   //values for usage in intro templates
-  final Color colour = const Color(0xFFFFBC4B);
-  final String buttonText = 'NEXT';
-  final Color buttonTextColour = Colors.black;
-  final String imagePath = 'assets/images/signing-pencil-svgrepo-com.svg';
-  final String headingText = 'Tired of handing in paper assignments?';
+  final Color colour = const Color(0xFF3e8ef1);
+  final String buttonText = "LET'S START";
+  final Color buttonTextColour = Colors.white;
+  final String imagePath = 'assets/images/university-svgrepo-com.svg';
+  final String headingText = 'Select your institution and start learning';
   final String bodyText =
-      'Then say hello to Teacher Feedback. Submit your work online and we\'ll notify you of any feedback.';
-  final int pageNum = 1;
+      'We will put you into contact with your teachers, who you can message and submit assignments to.';
+  final int pageNum = 2;
 
   @override
   Widget build(BuildContext context) {
-    //store function inside build function as it needs context
+    //see intro_one.dart for an explanation of what's happening here
     void onButtonPress() {
-      Navigator.pushNamed(context, '/intro-two');
+      Navigator.pushNamedAndRemoveUntil(context, '/sign-up', (route) => false);
     }
 
-    // return different template based on orientation
     return OrientationSwitcher(
       portrait: IntroTemplatePortrait(
           colour: colour,
