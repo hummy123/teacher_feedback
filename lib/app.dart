@@ -17,11 +17,14 @@ class App extends StatelessWidget {
       // according to listed breakpoints.
       builder: (context, widget) =>
           ResponsiveWrapper.builder(widget!, defaultScale: false, breakpoints: [
+        const ResponsiveBreakpoint.autoScaleDown(100, name: 'Smallest'),
         const ResponsiveBreakpoint.autoScaleDown(360, name: 'ExtraSmall'),
-        const ResponsiveBreakpoint.autoScale(640, name: MOBILE),
+        const ResponsiveBreakpoint.autoScale(640, name: 'Middle'),
       ], breakpointsLandscape: [
-        const ResponsiveBreakpoint.resize(600, name: 'ExtraSmall'),
-        const ResponsiveBreakpoint.resize(1000, name: MOBILE),
+        const ResponsiveBreakpoint.autoScaleDown(100, name: 'SMALLEST'),
+        const ResponsiveBreakpoint.autoScaleDown(360, name: 'ExtraSmall'),
+        const ResponsiveBreakpoint.autoScaleDown(800, name: 'Small'),
+        const ResponsiveBreakpoint.autoScale(1200, name: 'Middle'),
       ]),
     );
   }

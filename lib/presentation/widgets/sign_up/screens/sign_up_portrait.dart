@@ -32,12 +32,12 @@ class SignUpPortrait extends StatelessWidget {
           ),
           SignUpEmailButton(),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           Divider(
             indent: 30,
             endIndent: 30,
-            height: 10,
+            height: 1,
           ),
           ExistingAccountButton(),
         ],
